@@ -1,0 +1,255 @@
+.profiles {
+  display: grid;
+  grid-template-columns: 70% 20%;
+  gap: 2%;
+  position: relative;
+
+  .main-content {
+    padding: 30px;
+    overflow: auto;
+    .top-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        background: rgba($color: #c4c4c4, $alpha: 1);
+        padding: 4px;
+        width: 40%;
+        input {
+          width: 100%;
+          background: inherit;
+        }
+
+        span {
+          font-size: 24px;
+          margin-right: 5px;
+        }
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 42px;
+        font-size: 24px;
+        padding: 4px;
+        margin-right: 10px;
+        span {
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    .profile-content {
+      margin-top: 3%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      display: grid;
+      grid-template-columns: 48% 47%;
+      column-gap: 5%;
+      row-gap: 20px;
+      max-height: 350px;
+
+      .profile-section {
+        display: flex;
+        align-items: center;
+        width: 98%;
+        height: 100px;
+        border-radius: 4px;
+        padding: 4px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 4px;
+          margin-left: 2%;
+        }
+
+        .info {
+          justify-content: flex-start;
+          margin-left: 30px;
+          p {
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+          }
+        }
+      }
+      .active {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .profile-detail {
+    padding: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    .profile-icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      span {
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 25px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 4px;
+      }
+
+      .user-info {
+        letter-spacing: 0.5px;
+        margin-top: 10px;
+        p {
+          margin: 10px;
+          font-size: 14px;
+        }
+      }
+
+      .qr-code {
+        margin-top: 15%;
+        span {
+          font-size: 24px;
+        }
+      }
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+  .profile-dialog {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 15%;
+    left: 80px;
+  }
+}
+.loading {
+  width: 92%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .profiles {
+    width: 92%;
+    grid-template-columns: 70% 25%;
+    p {
+      font-size: 11px !important;
+    }
+
+    .main-content {
+      padding: 20px;
+    }
+    .profile-detail {
+      padding: 10px !important;
+
+      .qr-code,
+      button {
+        margin-top: 15% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .profiles {
+    width: 90%;
+    grid-template-columns: 70% 23%;
+    p {
+      font-size: 10px !important;
+    }
+
+    .main-content {
+      padding: 15px;
+    }
+    .profile-detail {
+      padding: 10px 5px !important;
+
+      button {
+        margin-top: 15% !important;
+        width: 110px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .profiles {
+    width: 87%;
+    grid-template-columns: 70% 25%;
+    p {
+      font-size: 9px !important;
+    }
+
+    .main-content {
+      padding: 12px;
+      .top-section {
+        .search-bar {
+          width: 60%;
+        }
+      }
+      .profile-content {
+        grid-template-columns: 70%;
+      }
+    }
+    .profile-detail {
+      padding: 10px 3px !important;
+
+      .qr-code,
+      button {
+        margin-top: 30% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .profiles {
+    width: 94%;
+    grid-template-columns: 98% !important;
+
+    .profile-detail {
+      .qr-code {
+        margin-top: 6% !important;
+      }
+    }
+
+    .profile-dialog {
+      left: 15px;
+      top: 10%;
+    }
+  }
+}

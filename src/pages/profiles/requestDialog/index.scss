@@ -1,0 +1,53 @@
+.request-cont {
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  top: 20%;
+  left: 40%;
+  background: rgba($color: #000, $alpha: 0.8);
+  border-radius: 4px;
+  z-index: 1;
+  padding: 40px;
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .request-form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .request-cont {
+    left: 28%;
+  }
+}
+
+@media (max-width: 600px) {
+  .request-cont {
+    left: 18%;
+  }
+}
+
+@media (max-width: 500px) {
+  .request-cont {
+    left: 10%;
+  }
+}

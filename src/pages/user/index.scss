@@ -1,0 +1,32 @@
+.user-profile {
+  width: 92%;
+
+  .user-details {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+    input {
+      background-color: rgba($color: #c4c4c4, $alpha: 0.5);
+      width: 250px;
+    }
+    .ant-upload-span {
+      width: 150px;
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 12px;
+      button {
+        background: var(--white);
+        border: none;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
